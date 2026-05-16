@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador de Leyes de Newton</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Leyes de Newton: Segunda y Tercera Ley</h1>
+
+  <div class="frame-selector">
+    <label for="problema">Selecciona el problema:</label>
+    <select id="problema">
+      <option value="atwood">Problema 1: Máquina de Atwood (Segunda Ley)</option>
+      <option value="caja">Problema 2: Persona empujando una caja (Tercera Ley)</option>
+    </select>
+  </div>
+
+  <div class="main-frame">
+    <section class="panel panel-datos">
+      <h2>1. INGRESA LOS DATOS</h2>
+      <p id="descripcion-label"></p>
+
+      <form id="formulario">
+        <div id="frame-inputs"></div>
+        <button id="boton-calcular" type="submit">▣ CALCULAR</button>
+      </form>
+
+      <div id="nota-label"></div>
+    </section>
+
+    <section class="panel panel-animacion">
+      <h2>2. ANIMACIÓN</h2>
+
+      <canvas id="canvas" width="560" height="430"></canvas>
+
+      <div class="frame-botones-animacion">
+        <button id="boton-pausar" type="button">⏸ PAUSAR</button>
+        <button id="boton-reiniciar" type="button">↻ REINICIAR</button>
+      </div>
+    </section>
+
+    <section class="panel panel-resultados">
+      <h2>3. RESULTADOS Y PROCEDIMIENTO</h2>
+      <textarea id="resultado-text" readonly></textarea>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
